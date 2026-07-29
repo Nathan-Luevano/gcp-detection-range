@@ -7,3 +7,6 @@
 
 .gitignore
 docs
+
+__pycache__/
+.pytest_cache/

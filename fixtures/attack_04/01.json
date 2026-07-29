@@ -21,7 +21,7 @@
         "containers": [
           {
             "name": "app",
-            "image": "alpine",
+            "image": "us-east4-docker.pkg.dev/detection-range-b9298c/range-repo/alpine-debug:v1",
             "securityContext": {
               "privileged": true
             }

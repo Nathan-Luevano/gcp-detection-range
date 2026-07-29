@@ -1,6 +1,6 @@
 {
   "logName": "projects/detection-range-b9298c/logs/cloudaudit.googleapis.com%2Factivity",
-  "timestamp": "2026-07-29T09:12:00.000Z",
+  "timestamp": "2026-07-29T09:35:20.000Z",
   "resource": {
     "type": "k8s_pod",
     "labels": {}
@@ -8,7 +8,7 @@
   "protopayload_auditlog": {
     "serviceName": "container.googleapis.com",
     "methodName": "io.k8s.core.v1.pods.create",
-    "resourceName": "namespaces/default/pods/web-frontend",
+    "resourceName": "namespaces/default/pods/backdoor",
     "authenticationInfo": {
       "principalEmail": "range-gke-node@detection-range-b9298c.iam.gserviceaccount.com"
     },
@@ -20,11 +20,8 @@
       "spec": {
         "containers": [
           {
-            "name": "web",
-            "image": "us-east4-docker.pkg.dev/detection-range-b9298c/range-repo/web-frontend:v1",
-            "securityContext": {
-              "privileged": false
-            }
+            "name": "main",
+            "image": "ghcr.io/attacker-controlled/backdoor:latest"
           }
         ],
         "volumes": []

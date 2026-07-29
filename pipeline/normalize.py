@@ -1,3 +1,6 @@
+APPROVED_IMAGE_PREFIX = "us-east4-docker.pkg.dev/detection-range-b9298c/range-repo/"
+
+
 def _is_privileged_pod(payload):
     spec = payload.get("request", {}).get("spec", {})
 
@@ -7,6 +10,17 @@ def _is_privileged_pod(payload):
 
     for volume in spec.get("volumes", []):
         if "hostPath" in volume:
+            return True
+
+    return False
+
+
+def _has_unapproved_image(payload):
+    spec = payload.get("request", {}).get("spec", {})
+
+    for container in spec.get("containers", []):
+        image = container.get("image", "")
+        if not image.startswith(APPROVED_IMAGE_PREFIX):
             return True
 
     return False
@@ -27,8 +41,11 @@ def normalize(raw):
         outcome = "success"
 
     action = payload["methodName"]
-    if action == "io.k8s.core.v1.pods.create" and _is_privileged_pod(payload):
-        action += ".privileged"
+    if action == "io.k8s.core.v1.pods.create":
+        if _is_privileged_pod(payload):
+            action += ".privileged"
+        if _has_unapproved_image(payload):
+            action += ".unapproved_image"
 
     return {
         "timestamp": raw["timestamp"],

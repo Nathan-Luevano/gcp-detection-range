@@ -1,0 +1,20 @@
+{
+  "logName": "projects/detection-range-b9298c/logs/cloudaudit.googleapis.com%2Factivity",
+  "timestamp": "2026-07-29T08:15:00.000Z",
+  "resource": {
+    "type": "gcs_bucket",
+    "labels": {}
+  },
+  "protopayload_auditlog": {
+    "serviceName": "storage.googleapis.com",
+    "methodName": "storage.objects.get",
+    "resourceName": "projects/_/buckets/detection-range-b9298c-sensitive-data/objects/quarterly_report.csv",
+    "authenticationInfo": {
+      "principalEmail": "analyst1@example.com"
+    },
+    "requestMetadata": {
+      "callerIp": "203.0.113.10"
+    },
+    "status": {}
+  }
+}

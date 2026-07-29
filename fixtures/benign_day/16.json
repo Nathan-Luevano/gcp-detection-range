@@ -1,0 +1,20 @@
+{
+  "logName": "projects/detection-range-b9298c/logs/cloudaudit.googleapis.com%2Factivity",
+  "timestamp": "2026-07-29T09:15:00.000Z",
+  "resource": {
+    "type": "k8s_cluster",
+    "labels": {}
+  },
+  "protopayload_auditlog": {
+    "serviceName": "container.googleapis.com",
+    "methodName": "io.k8s.core.v1.pods.list",
+    "resourceName": "namespaces/default/pods",
+    "authenticationInfo": {
+      "principalEmail": "range-gke-node@detection-range-b9298c.iam.gserviceaccount.com"
+    },
+    "requestMetadata": {
+      "callerIp": "10.10.0.5"
+    },
+    "status": {}
+  }
+}

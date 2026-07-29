@@ -1,0 +1,20 @@
+{
+  "logName": "projects/detection-range-b9298c/logs/cloudaudit.googleapis.com%2Factivity",
+  "timestamp": "2026-07-29T09:30:00.000Z",
+  "resource": {
+    "type": "project",
+    "labels": {}
+  },
+  "protopayload_auditlog": {
+    "serviceName": "cloudresourcemanager.googleapis.com",
+    "methodName": "SetIamPolicy",
+    "resourceName": "projects/detection-range-b9298c",
+    "authenticationInfo": {
+      "principalEmail": "admin@example.com"
+    },
+    "requestMetadata": {
+      "callerIp": "203.0.113.20"
+    },
+    "status": {}
+  }
+}

@@ -28,8 +28,8 @@ def test_normalize_bucket_read():
     row = normalize(raw)
 
     assert set(row.keys()) == EXPECTED_COLUMNS
-    assert row["actor"] == "analyst@detection-range-b9298c.iam.gserviceaccount.com"
-    assert row["actor_type"] == "service_account"
+    assert row["actor"] == "analyst@example.com"
+    assert row["actor_type"] == "user"
     assert row["source_ip"] == "73.202.11.44"
     assert row["action"] == "storage.objects.get"
     assert row["resource_type"] == "gcs_bucket"

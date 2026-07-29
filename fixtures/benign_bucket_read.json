@@ -12,7 +12,7 @@
     "methodName": "storage.objects.get",
     "resourceName": "projects/_/buckets/detection-range-b9298c-sensitive-data/objects/customer_records.csv",
     "authenticationInfo": {
-      "principalEmail": "analyst@detection-range-b9298c.iam.gserviceaccount.com"
+      "principalEmail": "analyst@example.com"
     },
     "requestMetadata": {
       "callerIp": "73.202.11.44"

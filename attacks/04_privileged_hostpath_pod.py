@@ -31,13 +31,13 @@ def main():
         make_row(
             "2026-07-29T09:30:00.000Z",
             "innocuous-looking-app",
-            [{"name": "app", "image": "alpine", "securityContext": {"privileged": True}}],
+            [{"name": "app", "image": "us-east4-docker.pkg.dev/detection-range-b9298c/range-repo/alpine-debug:v1", "securityContext": {"privileged": True}}],
             [],
         ),
         make_row(
             "2026-07-29T09:31:15.000Z",
             "log-collector",
-            [{"name": "collector", "image": "alpine", "volumeMounts": [{"name": "host-root", "mountPath": "/host"}]}],
+            [{"name": "collector", "image": "us-east4-docker.pkg.dev/detection-range-b9298c/range-repo/alpine-debug:v1", "volumeMounts": [{"name": "host-root", "mountPath": "/host"}]}],
             [{"name": "host-root", "hostPath": {"path": "/"}}],
         ),
     ]

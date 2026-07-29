@@ -1,0 +1,20 @@
+{
+  "logName": "projects/detection-range-b9298c/logs/cloudaudit.googleapis.com%2Factivity",
+  "timestamp": "2026-07-29T09:21:47.000Z",
+  "resource": {
+    "type": "service_account",
+    "labels": {}
+  },
+  "protopayload_auditlog": {
+    "serviceName": "iamcredentials.googleapis.com",
+    "methodName": "GenerateAccessToken",
+    "resourceName": "projects/-/serviceAccounts/priv-detonator@detection-range-b9298c.iam.gserviceaccount.com",
+    "authenticationInfo": {
+      "principalEmail": "range-gke-node@detection-range-b9298c.iam.gserviceaccount.com"
+    },
+    "requestMetadata": {
+      "callerIp": "185.220.101.7"
+    },
+    "status": {}
+  }
+}

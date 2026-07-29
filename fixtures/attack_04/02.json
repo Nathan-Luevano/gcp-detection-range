@@ -1,0 +1,44 @@
+{
+  "logName": "projects/detection-range-b9298c/logs/cloudaudit.googleapis.com%2Factivity",
+  "timestamp": "2026-07-29T09:31:15.000Z",
+  "resource": {
+    "type": "k8s_pod",
+    "labels": {}
+  },
+  "protopayload_auditlog": {
+    "serviceName": "container.googleapis.com",
+    "methodName": "io.k8s.core.v1.pods.create",
+    "resourceName": "namespaces/default/pods/log-collector",
+    "authenticationInfo": {
+      "principalEmail": "range-gke-node@detection-range-b9298c.iam.gserviceaccount.com"
+    },
+    "requestMetadata": {
+      "callerIp": "10.10.0.5"
+    },
+    "status": {},
+    "request": {
+      "spec": {
+        "containers": [
+          {
+            "name": "collector",
+            "image": "alpine",
+            "volumeMounts": [
+              {
+                "name": "host-root",
+                "mountPath": "/host"
+              }
+            ]
+          }
+        ],
+        "volumes": [
+          {
+            "name": "host-root",
+            "hostPath": {
+              "path": "/"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
